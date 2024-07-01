@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <title>LifeSpot</title>
     <link href="/Static/CSS/Index.css" rel=" stylesheet" type="text/css" />
-    <script type="text/javascript" src="../Static/JS/index.js"></script>
+    <script defertype="text/javascript" src="../Static/JS/index.js"></script>
 
     <script>
+
+        checkAge();
+
         handleSession();
+
+        sessionLog();
+
+        const inputParseFunction = function inputParseFunction() {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+
+        subscribeMessage();
+
     </script>
 
 </head>
@@ -16,7 +28,7 @@
         <h1>LifeSpot — прямые трансляции с улиц</h1>
         <p>Покажем, что происходит прямо сейчас!</p>
     </header>
-    <input class="input" type="text" oninput="filterContent()">
+    <input class="input" type="text" oninput="filterContent()" />
     <button class="button">Найти</button>
     <!--<div class="bordered">-->
     <!--<a href="https://www.youtube.com/watch?v=Vn28Tk_uuq0">
@@ -35,12 +47,6 @@
         </button>
     </a>-->
     <!--</div>-->
-    <aside id="sidebar">
-        <div class="navbar">
-            <a href="/"><p>О проетке</p></a>
-            <a href="/"><p>Все трансляции</p></a>
-        </div>
-    </aside>
     <div>
         <div class="video-container">
             <iframe width="500" height="250" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -52,22 +58,10 @@
         </div>
         <div class="video-container">
             <iframe width="500" height="250" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Трансляция с Лондона</p>
+            <p >Трансляция с Лондона</p>
         </div>
-        <aside id="sidebar">
-            <div class="navbar">
-                <a href="/"><p>О проетке</p></a>
-                <a href="/"><p>Все трансляции</p></a>
-            </div>
-        </aside>
+        <!--SIDEBAR-->
     </div>
 </body>
+<!--FOOTER-->
 </html>
-<footer>
-    <p>
-        LifeSpot - видео трансляции
-    </p>
-    <p>
-        Связь с разработчиком: contact@lifespot.ru
-    </p>
-</footer>

@@ -1,8 +1,10 @@
-﻿function handleSession() {
-
-    let session = new Map();
+﻿const session = new Map();
+function handleSession() {
 
     session.set("userAgent", window.navigator.userAgent);
+
+}
+function checkAge() {
 
     session.set("age", prompt("Пожалуйста, введите ваш возраст"));
 
@@ -16,27 +18,21 @@
         alert("Наши трансляции не предназначены для лиц моложе 18 лет. Вы будете перенаправлены");
         window.location.href = "http://www.google.com";
     }
-    return session;
 }
-//let sessionLog = function sessionLog(session) {
-//    for (let result of session) {
-//        console.log(result)
-//    }
-//}
-
-function filterContent(userInput) {
-
-
-    let userInput = document.getElementsByTagName('input')[0].value.toLowerCase();
+let sessionLog = function sessionLog() {
+    for (let result of session) {
+        console.log(result)
+    }
+}
+function filterContent() {
 
     let elements = document.getElementsByClassName('video-container');
 
-
     for (let i = 0; i <= elements.length; i++) {
 
-        let videoText = elements[i].querySelector(".video-title").innerText;
+        let videoText = elements[i].querySelector("p").innerText;
 
-        if (!videoText.toLowerCase().includes(userInput.toLowerCase())) {
+        if (!videoText.toLowerCase().includes(inputParseFunction().toLowerCase())) {
 
             elements[i].style.display = 'none';
         } else {
@@ -44,4 +40,7 @@ function filterContent(userInput) {
             elements[i].style.display = 'inline-block';
         }
     }
+}
+function subscribeMessage() {
+    setTimeout((() => alert("Нравится LifeSpot? " + '\n' +  "Подпишитесь на наш Instagram @lifespot999!")), 60000);
 }
