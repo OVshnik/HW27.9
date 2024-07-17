@@ -7,16 +7,7 @@
     <script defertype="text/javascript" src="../Static/JS/index.js"></script>
 
     <script>
-
-        checkAge();
-
-        handleSession();
-
-        sessionLog();
-
-        const inputParseFunction = function inputParseFunction() {
-            return document.getElementsByTagName('input')[0].value.toLowerCase();
-        }
+        handleSession(logger, checker)
 
         subscribeMessage();
 
@@ -54,7 +45,7 @@
         </div>
         <div class="video-container">
             <iframe width="500" height="250" src="https://www.youtube.com/embed/wCcMcaiRbhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Трансляция с Москвы</p>
+            <p>Трансляция с Санкт-Петербурга</p>
         </div>
         <div class="video-container">
             <iframe width="500" height="250" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
